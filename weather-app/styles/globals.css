@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #faf7f5;
+  background-color: var(--color-bg);
 }
 
 * {
@@ -37,6 +37,17 @@ button {
   }
 }
 
+:root {
+  --color-red-50: #ffd2cc;
+  --color-red-100: #ffaba1;
+  --color-red-200: #ff0045;
+  --color-red-300: #b70055;
+  --color-bg: #faf7f5;
+  --color-gray-100: #8b8b8b;
+  --color-gray-200: #555;
+  --color-gray-300: #3d3d3d;
+}
+
 /* fonts */
 
 /* home fonts */
@@ -60,7 +71,7 @@ button {
 
 /* city fonts */
 .font-city-heading {
-  color: #3d3d3d;
+  color: var(--color-gray-300);
   font-style: normal;
   font-size: 2.5rem;
   font-weight: 900;
@@ -71,7 +82,7 @@ button {
 
 /* 현재 시간 */
 .font-city-time {
-  color: #555;
+  color: var(--color-gray-200);
   font-style: normal;
   font-size: 1.5rem;
   font-weight: 700;
@@ -82,7 +93,7 @@ button {
 
 /* 도시명 */
 .font-city-title {
-  color: #3d3d3d;
+  color: var(--color-gray-300);
   font-style: normal;
   font-size: 2.25rem;
   font-weight: 700;
@@ -93,7 +104,7 @@ button {
 
 /* 인구수 */
 .font-city-population {
-  color: #8b8b8b;
+  color: var(--color-gray-100);
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 600;
@@ -104,7 +115,7 @@ button {
 
 /* 기온 */
 .font-city-temp {
-  color: #3d3d3d;
+  color: var(--color-gray-300);
   font-style: normal;
   font-size: 3.125rem;
   font-weight: 700;
@@ -115,7 +126,7 @@ button {
 
 /* 날씨 설명 */
 .font-city-desc {
-  color: #8b8b8b;
+  color: var(--color-gray-100);
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 600;
@@ -126,7 +137,7 @@ button {
 
 /* 5-day Forecast */
 .font-city-subtitle {
-  color: #3d3d3d;
+  color: var(--color-gray-300);
   font-style: normal;
   font-size: 2.25rem;
   font-weight: 700;
@@ -136,7 +147,7 @@ button {
 
 /* 날짜, 온도 */
 .font-city-body {
-  color: #3d3d3d;
+  color: var(--color-gray-300);
   font-style: normal;
   font-size: 1.875rem;
   font-weight: 700;
@@ -147,7 +158,7 @@ button {
 
 /* clear sky */
 .font-city-caption {
-  color: #8b8b8b;
+  color: var(--color-gray-100);
   font-style: normal;
   font-size: 1.25rem;
   font-weight: 600;

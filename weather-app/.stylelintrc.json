@@ -101,7 +101,8 @@
         "noEmptyLineBetween": true,
         "properties": ["cursor", "opacity", "animation", "transition"]
       }
-    ]
+    ],
+    "selector-class-pattern": null
   },
   "overrides": [
     {
