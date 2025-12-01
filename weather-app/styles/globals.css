@@ -4,6 +4,7 @@ html {
   padding: 0;
   margin: 0;
   font-family: 'Pretendard Variable';
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {

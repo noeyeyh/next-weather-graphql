@@ -1,0 +1,96 @@
+/* city fonts */
+.font-city-heading {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// 현재 시간
+.font-city-time {
+  color: #555;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// 도시명
+.font-city-title {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// 인구수 
+.font-city-population {
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// 기온 
+.font-city-temp {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// 날씨 설명
+.font-city-desc {
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.0375rem;
+}
+
+// 5-day Forecast 
+.font-city-subtitle {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+// 날짜, 온도
+.font-city-body {
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.0375rem;
+}
+
+// clear sky
+.font-city-caption {
+  color: #8b8b8b;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.0375rem;
+}
