@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 import CityBtn from '../components/CityBtn/CityBtn';
+import { LogoIcon } from '../public/icon';
 
 export default function Home() {
   const router = useRouter();
@@ -39,6 +40,8 @@ export default function Home() {
           <CityBtn text="Paris" onClick={() => handleCityClick('Paris')} />
           <CityBtn text="London" onClick={() => handleCityClick('London')} />
         </section>
+
+        <LogoIcon />
       </main>
     </>
   );

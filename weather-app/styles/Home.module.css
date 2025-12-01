@@ -10,4 +10,5 @@
 .cityList {
   display: inline-flex;
   gap: 0.62rem;
+  margin-bottom: 4.75rem;
 }
