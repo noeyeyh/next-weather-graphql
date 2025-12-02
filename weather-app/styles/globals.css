@@ -43,6 +43,8 @@ button {
   --color-red-200: #ff0045;
   --color-red-300: #b70055;
   --color-bg: #faf7f5;
+  --color-white: #fff;
+  --color-gray-50: #dfdfdf;
   --color-gray-100: #8b8b8b;
   --color-gray-200: #555;
   --color-gray-300: #3d3d3d;
@@ -86,7 +88,6 @@ button {
   font-style: normal;
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: center;
   line-height: 110%;
   letter-spacing: -0.0375rem;
 }
@@ -97,13 +98,14 @@ button {
   font-style: normal;
   font-size: 2.25rem;
   font-weight: 700;
-  text-align: center;
   line-height: 110%;
   letter-spacing: -0.0375rem;
 }
 
 /* 인구수 */
 .font-city-population {
+  margin-bottom: 0.31rem;
+  margin-left: 0.06rem;
   color: var(--color-gray-100);
   font-style: normal;
   font-size: 0.875rem;
