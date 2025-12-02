@@ -1,0 +1,63 @@
+.section {
+  width: 100%;
+  margin-top: 2.4rem;
+  border: 1px solid var(--color-gray-50);
+  border-radius: 0.6rem;
+  background: var(--color-white);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-gray-50);
+}
+
+.dayArticle + .dayArticle {
+  border-top: 1px solid var(--color-gray-50);
+}
+
+.dayHeader {
+  width: 100%;
+}
+
+.dayBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.75rem 1.88rem;
+}
+
+.hourList {
+  list-style: none;
+}
+
+/* 줄 전체 */
+.hourItem + .hourItem {
+  margin-top: 1.2rem;
+}
+
+.hourRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.56rem 3.13rem;
+}
+
+/* 왼쪽: 아이콘 + 시간 */
+.hourLeft {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* 오른쪽: clear sky + temp */
+.hourRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-end;
+}
