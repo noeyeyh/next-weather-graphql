@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
+import { OPENWEATHER_BASE_URL } from '../constants/weather';
 
-const BASE_URL = process.env.OPENWEATHER_BASE_URL;
 const API_KEY = process.env.OPENWEATHER_API_KEY;
 
 if (!API_KEY) {
@@ -9,7 +9,7 @@ if (!API_KEY) {
 
 // 현재 날씨
 export async function fetchCurrentWeather(city) {
-  const url = `${BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
+  const url = `${OPENWEATHER_BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
 
   const res = await fetch(url);
   if (!res.ok) {
@@ -22,7 +22,7 @@ export async function fetchCurrentWeather(city) {
 
 // 5일 예보
 export async function fetchFiveDayForecast(city) {
-  const url = `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
+  const url = `${OPENWEATHER_BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
 
   const res = await fetch(url);
   if (!res.ok) {
