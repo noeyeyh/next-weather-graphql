@@ -23,6 +23,17 @@
   align-items: center;
 }
 
+.imgContainer {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.icon {
+  object-fit: cover;
+  object-position: center;
+}
+
 .textGroup {
   display: flex;
   flex-direction: column;

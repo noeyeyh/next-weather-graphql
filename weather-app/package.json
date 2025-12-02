@@ -19,6 +19,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@svgr/webpack": "^8.1.0",
     "eslint": "8.56.0",
     "eslint-config-next": "12.3.4",

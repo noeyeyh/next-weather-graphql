@@ -33,7 +33,9 @@ button {
 
 /* 800px 미만일 경우 가로 스크롤 활성화 */
 @media (width <= 799px) {
+  html,
   body {
+    width: 100%;
     overflow-x: auto;
   }
 }

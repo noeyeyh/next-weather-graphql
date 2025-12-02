@@ -54,6 +54,17 @@
   align-items: center;
 }
 
+.imgContainer {
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.icon {
+  object-fit: cover;
+  object-position: center;
+}
+
 /* 오른쪽: clear sky + temp */
 .hourRight {
   display: flex;

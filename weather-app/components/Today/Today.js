@@ -1,5 +1,6 @@
 import styles from './Today.module.css';
-import { WeatherIcon } from '../../public/icon';
+import Image from 'next/image';
+import { WEATHER_ICON_BASE_URL } from '../../constants/weather';
 
 export default function Today({ today }) {
   if (!today) return null;
@@ -10,7 +11,15 @@ export default function Today({ today }) {
     <article className={styles.today}>
       <header>
         <div className={styles.info}>
-          <WeatherIcon icon={icon} />
+          <div className={styles.imgContainer}>
+            <Image
+              src={`${WEATHER_ICON_BASE_URL}${icon}@2x.png`}
+              alt={desc}
+              layout="fill"
+              className={styles.icon}
+              sizes="5rem"
+            />
+          </div>
           <div className={styles.textGroup}>
             <p className="font-city-time">{datetime}</p>
             <div className={styles.cityTitle}>

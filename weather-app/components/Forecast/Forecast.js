@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import styles from './Forecast.module.css';
-import { UpIcon, DownIcon, SmallWeatherIcon } from '../../public/icon';
+import { UpIcon, DownIcon } from '../../public/icon';
 import { groupByDate } from '../../utils/weather';
+import Image from 'next/image';
+import { WEATHER_ICON_BASE_URL } from '../../constants/weather';
 
 export default function Forecast({ items }) {
   const [openMap, setOpenMap] = useState({});
@@ -54,7 +56,15 @@ export default function Forecast({ items }) {
                       <div className={styles.hourRow}>
                         {/* 왼쪽: 아이콘 + 시간 */}
                         <div className={styles.hourLeft}>
-                          <SmallWeatherIcon /* icon={hour.icon} */ />
+                          <div className={styles.imgContainer}>
+                            <Image
+                              src={`${WEATHER_ICON_BASE_URL}${hour.icon}@2x.png`}
+                              alt={hour.desc}
+                              layout="fill"
+                              className={styles.icon}
+                              sizes="3.75rem"
+                            />
+                          </div>
                           <time className="font-city-body" style={{ color: 'var(--color-gray-200)' }}>
                             {hour.time}
                           </time>

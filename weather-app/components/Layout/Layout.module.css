@@ -15,7 +15,6 @@
 /* 800px 미만 */
 @media (width <= 799px) {
   .layout {
-    width: 100%;
     min-width: 800px;
   }
 }
