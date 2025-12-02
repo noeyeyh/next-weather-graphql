@@ -41,9 +41,9 @@ export default function Forecast({ items }) {
                 onClick={() => handleToggle(index)}
                 aria-expanded={isOpen}
                 aria-controls={panelId}>
-                <span className="font-city-body" style={{ color: 'var(--color-gray-300)' }}>
+                <time className="font-city-body" style={{ color: 'var(--color-gray-300)' }}>
                   {day.date}
-                </span>
+                </time>
                 {isOpen ? <DownIcon /> : <UpIcon />}
               </button>
             </header>

@@ -34,12 +34,12 @@ export default function Home() {
           Choose a city from the list below to check the weather.
         </p>
 
-        <section className={styles.cityList}>
-          <CityBtn text="Seoul" onClick={() => handleCityClick('Seoul')} />
-          <CityBtn text="Tokyo" onClick={() => handleCityClick('Tokyo')} />
-          <CityBtn text="Paris" onClick={() => handleCityClick('Paris')} />
-          <CityBtn text="London" onClick={() => handleCityClick('London')} />
-        </section>
+        <nav className={styles.cityList} aria-label="City list">
+          <CityBtn text="Seoul" />
+          <CityBtn text="Tokyo" />
+          <CityBtn text="Paris" />
+          <CityBtn text="London" />
+        </nav>
 
         <LogoIcon />
       </main>

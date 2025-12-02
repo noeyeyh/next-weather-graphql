@@ -33,9 +33,19 @@ export default function City() {
   if (!city) return null;
 
   // 3) 로딩/에러 처리
-  if (todayLoading || forecastLoading) return <div className={styles.container}>날씨 정보를 불러오는 중입니다…</div>;
+  if (todayLoading || forecastLoading)
+    return (
+      <main className={styles.container}>
+        <p role="status">날씨 정보를 불러오는 중입니다…</p>
+      </main>
+    );
 
-  if (todayError || forecastError) return <div className={styles.container}>날씨 데이터를 가져오지 못했습니다.</div>;
+  if (todayError || forecastError)
+    return (
+      <main className={styles.container}>
+        <p role="alert">날씨 데이터를 가져오지 못했습니다.</p>
+      </main>
+    );
 
   // 4) Response 데이터
   const w = todayData.currentWeather;
