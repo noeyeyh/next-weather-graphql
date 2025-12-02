@@ -6,7 +6,7 @@ export default function CityBtn({ text }) {
 
   return (
     <Link href={href} legacyBehavior>
-      <a className={styles.btn}>{text}</a>
+      <a className={`${styles.btn} font-home-body`}>{text}</a>
     </Link>
   );
 }

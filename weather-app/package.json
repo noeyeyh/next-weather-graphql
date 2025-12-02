@@ -12,6 +12,7 @@
     "@apollo/client": "3.8.10",
     "apollo-server-micro": "^3.13.0",
     "cross-fetch": "^4.1.0",
+    "framer-motion": "^12.23.25",
     "graphql": "16.9.0",
     "micro": "^10.0.1",
     "next": "12.3.4",
