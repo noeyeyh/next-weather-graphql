@@ -20,7 +20,7 @@ export async function fetchCurrentWeather(city) {
   return data;
 }
 
-// 5일(3시간 간격) 예보
+// 5일 예보
 export async function fetchFiveDayForecast(city) {
   const url = `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=kr`;
 

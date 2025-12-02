@@ -1,4 +1,3 @@
-// pages/api/graphql.js
 import { ApolloServer } from 'apollo-server-micro';
 import { typeDefs } from '../../graphql/typeDef';
 import { resolvers } from '../../graphql/resolvers';

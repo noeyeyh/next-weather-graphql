@@ -3,49 +3,70 @@ import styles from '../styles/City.module.css';
 import { SmallLogoIcon } from '../public/icon';
 import Today from '../components/Today/Today';
 import Forecast from '../components/Forecast/Forecast';
+import { useQuery } from '@apollo/client';
+import { GET_CURRENT_WEATHER, GET_FIVE_DAY_FORECAST } from '../graphql/queries';
 
 export default function City() {
   const router = useRouter();
   const { city } = router.query;
 
-  const dummyToday = {
-    datetime: 'May 23. 03:00am',
-    city: 'Seoul',
-    country: 'KR',
-    population: '10,349,312',
-    temp: '292.98℃',
-    feelsLike: '291.91℃',
-    desc: 'clear sky',
-    windSpeed: '3.33m/s',
-    humidity: '34%',
+  // 1) useQuery는 조건 없이 최상단에서 호출
+  const {
+    data: todayData,
+    loading: todayLoading,
+    error: todayError,
+  } = useQuery(GET_CURRENT_WEATHER, {
+    variables: { city },
+    skip: !city, // ← city 없으면 쿼리 실행 안함
+  });
+
+  const {
+    data: forecastData,
+    loading: forecastLoading,
+    error: forecastError,
+  } = useQuery(GET_FIVE_DAY_FORECAST, {
+    variables: { city },
+    skip: !city,
+  });
+
+  // 2) city 없으면 화면만 비워두기
+  if (!city) return null;
+
+  // 3) 로딩/에러 처리
+  if (todayLoading || forecastLoading) return <div className={styles.container}>날씨 정보를 불러오는 중입니다…</div>;
+
+  if (todayError || forecastError) return <div className={styles.container}>날씨 데이터를 가져오지 못했습니다.</div>;
+
+  // 4) Response 데이터
+  const w = todayData.currentWeather;
+  const f = forecastData.fiveDayForecast;
+
+  const today = {
+    datetime: new Date().toLocaleString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    }),
+    city: w.city,
+    country: w.country,
+    population: f.population.toLocaleString(),
+    temp: w.temp,
+    feelsLike: w.feelsLike,
+    desc: w.description,
+    windSpeed: w.windSpeed,
+    humidity: w.humidity,
+    icon: w.icon,
   };
 
-  const dummyFiveDay = [
-    {
-      date: 'May 23',
-      hours: [
-        { time: '03:00am', temp: '297.32°C / 297.32°C', desc: 'clear sky' },
-        { time: '06:00am', temp: '297.32°C / 297.32°C', desc: 'clear sky' },
-        // ...
-      ],
-    },
-    {
-      date: 'May 24',
-      hours: [
-        { time: '03:00am', temp: '297.32°C / 297.32°C', desc: 'clear sky' },
-        // ...
-      ],
-    },
-    // ...
-  ];
+  const forecastList = forecastData.fiveDayForecast.items;
 
   return (
     <main className={styles.container}>
       <SmallLogoIcon />
       <h1 className="font-city-heading">Weather Information for {city}</h1>
-      <Today today={dummyToday} />
-
-      <Forecast days={dummyFiveDay} />
+      <Today today={today} />
+      <Forecast items={forecastList} />
     </main>
   );
 }
